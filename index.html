@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COPACI - Sistema Ciudadano</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginView">
+  <div class="login-card">
+    <img src="https://i.ibb.co/0jQ0m6J0/copaci-logo.png" onerror="this.style.display='none'" class="logo-img" id="logoMain">
+    <div style="font-size:60px">🤝</div>
+    <h1>Sistema COPACI</h1>
+    <p>Comité de Participación Ciudadana</p>
+    <div class="roles">
+      <button class="rol-btn" onclick="entrar('ciudadano')"><span>👤</span><div><b>Ciudadano</b><small>Reportar baches, fugas, luz</small></div></button>
+      <button class="rol-btn" onclick="entrar('copaci')"><span>🤝</span><div><b>COPACI</b><small>Atender reportes de colonia</small></div></button>
+      <button class="rol-btn admin" onclick="entrar('administrador')"><span>🛡️</span><div><b>Administrador</b><small>Ver estadísticas y borrar</small></div></button>
+    </div>
+  </div>
+</div>
+
+<div id="appView" style="display:none;">
+<header>
+  <div class="header-content">
+    <div class="logo-circle">🤝</div>
+    <div>
+      <h1 id="tituloRol"></h1>
+      <p id="descRol"></p>
+    </div>
+    <button class="btn-logout" onclick="salir()">✕ Salir</button>
+  </div>
+</header>
+
+<div class="container">
+  <div id="statsPanel" class="stats-grid">
+    <div class="stat"><b id="statTotal">0</b><span>Total reportes</span></div>
+    <div class="stat"><b id="statPend" style="color:#f59e0b">0</b><span>Pendientes</span></div>
+    <div class="stat"><b id="statProc" style="color:#3b82f6">0</b><span>En proceso</span></div>
+    <div class="stat"><b id="statRes" style="color:#10b981">0</b><span>Resueltos</span></div>
+  </div>
+
+  <div id="formCard" class="card">
+    <h2>📝 Nuevo Reporte</h2>
+    <form id="formReporte">
+      <label>Tipo de reporte</label>
+      <select id="tipo" required>
+        <option value="">Selecciona...</option>
+        <option value="Bache">🚧 Bache</option>
+        <option value="Fuga de Agua">💧 Fuga de Agua</option>
+        <option value="Luminaria">💡 Luminaria</option>
+        <option value="Basura">🗑️ Basura / Otro</option>
+      </select>
+      <label>Dirección exacta</label>
+      <input type="text" id="direccion" placeholder="Ej: Calle Colón 123, Toluca" required>
+      <label>Descripción</label>
+      <textarea id="desc" rows="3" placeholder="Describe el problema..." required></textarea>
+      <button type="submit">Enviar a COPACI →</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <h2 id="listaTitulo">Reportes</h2><span id="contador" class="count"></span>
+    </div>
+    <div id="lista"></div>
+  </div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

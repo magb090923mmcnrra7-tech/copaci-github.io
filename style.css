@@ -1,0 +1,25 @@
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',Arial,sans-serif;background:#f0f7f2}
+#loginView{min-height:100vh;display:grid;place-items:center;background:linear-gradient(135deg,#0b3d91 0%,#0a8a3c 100%);padding:20px}
+.login-card{background:#fff;padding:28px;border-radius:22px;max-width:420px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.login-card h1{margin-top:6px}.login-card p{color:#6b7280;font-size:13px;margin-top:4px}
+.roles{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.rol-btn{display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:14px;border:2px solid #e5e7eb;background:#f9fafb;text-align:left;cursor:pointer;width:100%;transition:.2s}
+.rol-btn span{width:44px;height:44px;background:white;border-radius:10px;display:grid;place-items:center;font-size:22px;border:1px solid #eee}
+.rol-btn b{font-size:14px}.rol-btn small{font-size:11px;color:#6b7280}
+.rol-btn:hover{border-color:#0a8a3c;transform:translateY(-1px)}
+.rol-btn.admin{background:#0b3d91;color:#fff;border-color:#0b3d91}.rol-btn.admin small{color:#a8c6ff}
+header{background:linear-gradient(90deg,#0b3d91,#1565c0);color:#fff;padding:14px 20px;position:sticky;top:0;z-index:99}
+.header-content{max-width:1100px;margin:0 auto;display:flex;gap:12px;align-items:center}
+.logo-circle{width:48px;height:48px;background:#fff;border-radius:50%;display:grid;place-items:center;font-size:24px}
+.btn-logout{margin-left:auto;background:#fff;color:#0b3d91;border:none;padding:9px 18px;border-radius:20px;font-weight:800;cursor:pointer;display:block!important;width:auto!important}
+.container{max-width:1100px;margin:20px auto;padding:0 20px 30px;display:grid;grid-template-columns:380px 1fr;gap:18px}
+.card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 4px 18px rgba(0,0,0,.06);border:1px solid #e6eee6}
+label{font-size:12px;font-weight:700;color:#374151;margin:10px 0 4px;display:block}
+input,select,textarea{width:100%;padding:11px 12px;border-radius:10px;border:1px solid #d1d9d1;font-size:14px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:#0a8a3c;box-shadow:0 0 0 3px rgba(10,138,60,.15)}
+button[type=submit]{width:100%;margin-top:14px;padding:12px;background:linear-gradient(90deg,#0a8a3c,#18b64a);color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer}
+.stats-grid{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stat{background:#fff;padding:14px;border-radius:12px;text-align:center;border:1px solid #e6eee6}.stat b{font-size:22px;display:block}.stat span{font-size:11px;color:#6b7280}
+.reporte-item{background:#f8fcf8;border:1px solid #e3ece3;border-radius:12px;padding:12px;margin-top:10px}
+.count{background:#e6f4e6;padding:5px 10px;border-radius:20px;font-size:12px;font-weight:700}
+@media(max-width:860px){.container{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}}
